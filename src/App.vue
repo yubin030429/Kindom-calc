@@ -1,14 +1,22 @@
 <template>
   <v-app id="default">
-    <div class="test">testinasdfg</div>
+    <ToolBar />
+
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
 
 <script>
+import ToolBar from "@/components/ToolBar.vue";
+
 export default {
-  data: () => ({
-    //
-  }),
+  name: "App",
+
+  components: {
+    ToolBar,
+  },
 };
 </script>
 
