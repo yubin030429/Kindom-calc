@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div>asdf</div>
+    <div>testing</div>
   </v-app>
 </template>
 
