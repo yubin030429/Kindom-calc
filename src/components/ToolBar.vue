@@ -9,9 +9,8 @@
       <v-divider></v-divider>
     </v-card>
 
-    <LeftNav v-if="navLocation" />
-    <BottomNav v-else-if="navLocation == false"></BottomNav>
-    <MainNav />
+    <MainNav v-if="navLocation" />
+    <BottomNav v-else></BottomNav>
   </div>
 </template>
 
@@ -25,8 +24,7 @@ export default {
 
   data() {
     return {
-      windowSize: null,
-      navLocation: null,
+      navLocation: true,
     };
   },
 };

@@ -7,14 +7,13 @@
 </template>
 
 <script>
+import NavContent from "@/components/nav/NavContent.vue";
+
 export default {
-  data() {
-    return {
-      items: [
-        { title: "토핑세팅", icon: "mdi-cards-diamond" },
-        { title: "별사탕/파우더", icon: "mdi-octagram" },
-      ],
-    };
+  data() {},
+
+  components: {
+    NavContent,
   },
 };
 </script>

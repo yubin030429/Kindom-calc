@@ -1,7 +1,7 @@
 <template>
   <v-list nav>
     <v-list-item v-for="item in items" :key="item.title" link>
-      <v-list>
+      <v-list class="d-flex">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
@@ -19,9 +19,8 @@ export default {
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "mdi-view-dashboard" },
-        { title: "Photos", icon: "mdi-image" },
-        { title: "About", icon: "mdi-help-box" },
+        { title: "토핑세팅", icon: "mdi-cards-diamond" },
+        { title: "별사탕/파우더", icon: "mdi-octagram" },
       ],
     };
   },
