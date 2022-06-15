@@ -16,10 +16,12 @@
 
 <script>
 import MainNav from "@/components/nav/MainNav.vue";
+import BottomNav from "@/components/nav/BottomNav.vue";
 
 export default {
   components: {
     MainNav,
+    BottomNav,
   },
 
   data() {
