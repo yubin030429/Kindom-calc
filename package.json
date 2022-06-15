@@ -41,23 +41,12 @@
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended",
-      "plugin:prettier/recommended",
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
+      "plugin:prettier/recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto"
-        }
-      ]
-    }
+    "rules": {}
   },
   "browserslist": [
     "> 1%",

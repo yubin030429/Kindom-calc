@@ -9,12 +9,9 @@
       <v-divider></v-divider>
     </v-card>
 
-<<<<<<< HEAD
     <LeftNav v-if="navLocation" />
     <BottomNav v-else-if="navLocation == false"></BottomNav>
-=======
     <MainNav />
->>>>>>> parent of 1a495db (make BottomNav)
   </div>
 </template>
 
@@ -22,11 +19,6 @@
 import MainNav from "@/components/nav/MainNav.vue";
 
 export default {
-<<<<<<< HEAD
-=======
-  name: "App",
-
->>>>>>> parent of 1a495db (make BottomNav)
   components: {
     MainNav,
   },

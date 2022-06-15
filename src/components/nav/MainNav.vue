@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <v-card style="top: 1vh" flat height="93vh" width="240">
     <v-navigation-drawer permanent>
       <v-list nav>
@@ -30,3 +31,7 @@ export default {
   },
 };
 </script>
+=======
+  <div>asdf</div>
+</template>
+>>>>>>> parent of d23d25a (make left nav contents)
