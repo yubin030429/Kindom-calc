@@ -1,16 +1,15 @@
 <template>
   <div>
-    <v-card flat height="6vh">
-      <v-toolbar flat>
-        <v-icon color="orange lighten-2" class="mr-4">mdi-castle</v-icon>
-        <v-toolbar-title>Kingdom Calc.</v-toolbar-title>
-        <v-spacer></v-spacer>
+    <v-card flat>
+      <v-toolbar height="60px" flat>
+        <v-btn text to="/">
+          <v-icon color="orange lighten-2" class="mr-4">mdi-castle</v-icon>
+          <v-toolbar-title>Kingdom Calc.</v-toolbar-title>
+        </v-btn>
       </v-toolbar>
-      <v-divider></v-divider>
+      <MainNav />
+      <BottomNav></BottomNav>
     </v-card>
-
-    <MainNav v-if="navLocation" />
-    <BottomNav v-else></BottomNav>
   </div>
 </template>
 
@@ -25,9 +24,7 @@ export default {
   },
 
   data() {
-    return {
-      navLocation: true,
-    };
+    return {};
   },
 };
 </script>

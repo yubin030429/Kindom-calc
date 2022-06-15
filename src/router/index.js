@@ -1,14 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import growCookie from "@/views/growCookie";
+import toppingSet from "@/views/toppingSet";
+import firstPage from "@/views/firstPage";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "growCookie",
-    component: growCookie,
+    name: "firstPage",
+    component: firstPage,
+  },
+  {
+    path: "/toppingSet",
+    name: "toppingSet",
+    component: toppingSet,
   },
 ];
 

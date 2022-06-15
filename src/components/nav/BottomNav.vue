@@ -1,40 +1,53 @@
 <template>
-  <div class="overflow-hidden">
-    <div class="text-center mb-8">
-      <v-btn color="deep-purple" outlined @click="active = !active">
-        Toggle Navigation
-      </v-btn>
-    </div>
+  <v-bottom-navigation v-if="visiable" app color="orange lighten-2" grow>
+    <v-btn
+      v-for="item in items"
+      :to="item.route"
+      :key="item"
+      text
+      height="100%"
+    >
+      <span>{{ item.title }}</span>
 
-    <v-bottom-navigation v-model="value" :input-value="active" color="indigo">
-      <v-btn>
-        <span>Recents</span>
-
-        <v-icon>mdi-history</v-icon>
-      </v-btn>
-
-      <v-btn>
-        <span>Favorites</span>
-
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn>
-        <span>Nearby</span>
-
-        <v-icon>mdi-map-marker</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
-  </div>
+      <v-icon>{{ item.icon }}</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      value: 1,
-      active: true,
+      windowWidth: null,
+      visiable: null,
+      items: [
+        { title: "토핑세팅", icon: "mdi-cards-diamond", route: "/toppingSet" },
+        { title: "별사탕/파우더", icon: "mdi-octagram", route: "/powder" },
+      ],
     };
+  },
+
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
+
+  watch: {
+    windowWidth: function () {
+      if (this.windowWidth < 800) {
+        this.visiable = true;
+      } else {
+        this.visiable = false;
+      }
+    },
   },
 };
 </script>
