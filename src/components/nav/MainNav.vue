@@ -1,20 +1,7 @@
 <template>
-<<<<<<< HEAD
   <v-card style="top: 1vh" flat height="93vh" width="240">
     <v-navigation-drawer permanent>
-      <v-list nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list rounded class="d-flex">
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list>
-        </v-list-item>
-      </v-list>
+      <NavContent />
     </v-navigation-drawer>
   </v-card>
 </template>
@@ -31,7 +18,3 @@ export default {
   },
 };
 </script>
-=======
-  <div>asdf</div>
-</template>
->>>>>>> parent of d23d25a (make left nav contents)
