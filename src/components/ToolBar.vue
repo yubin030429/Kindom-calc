@@ -9,19 +9,26 @@
       <v-divider></v-divider>
     </v-card>
 
+<<<<<<< HEAD
     <LeftNav v-if="navLocation" />
     <BottomNav v-else-if="navLocation == false"></BottomNav>
+=======
+    <MainNav />
+>>>>>>> parent of 1a495db (make BottomNav)
   </div>
 </template>
 
 <script>
-import LeftNav from "@/components/nav/LeftNav.vue";
-import BottomNav from "@/components/nav/BottomNav.vue";
+import MainNav from "@/components/nav/MainNav.vue";
 
 export default {
+<<<<<<< HEAD
+=======
+  name: "App",
+
+>>>>>>> parent of 1a495db (make BottomNav)
   components: {
-    LeftNav,
-    BottomNav,
+    MainNav,
   },
 
   data() {
