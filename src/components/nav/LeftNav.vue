@@ -1,5 +1,5 @@
 <template>
-  <v-card style="top: 1vh" flat height="93vh" width="240">
+  <v-card style="top: 10px" flat height="93vh" width="240">
     <v-navigation-drawer permanent>
       <NavContent />
     </v-navigation-drawer>

@@ -9,18 +9,45 @@
       <v-divider></v-divider>
     </v-card>
 
-    <MainNav />
+    <LeftNav v-if="windowSize" />
+    <BottomNav v-else />
   </div>
 </template>
 
 <script>
-import MainNav from "@/components/nav/MainNav.vue";
+import LeftNav from "@/components/nav/LeftNav.vue";
+import BottomNav from "@/components/nav/BottomNav.vue";
 
 export default {
   name: "App",
 
+  data() {
+    return {
+      windowSize: null,
+    };
+  },
+
+  created() {
+    window.addEventListener("resize", this.windowSizeChange);
+
+    this.windowSizeChange();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.windowSizeChange);
+  },
+  methods: {
+    windowSizeChange() {
+      if (window.innerWidth > 600) {
+        this.windowSize = true;
+      } else {
+        this.windowSize = false;
+      }
+    },
+  },
+
   components: {
-    MainNav,
+    LeftNav,
+    BottomNav,
   },
 };
 </script>
