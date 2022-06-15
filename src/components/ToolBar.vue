@@ -9,8 +9,8 @@
       <v-divider></v-divider>
     </v-card>
 
-    <LeftNav v-if="windowSize" />
-    <BottomNav v-else />
+    <LeftNav v-if="navLocation" />
+    <BottomNav v-else-if="navLocation == false"></BottomNav>
   </div>
 </template>
 
@@ -19,35 +19,16 @@ import LeftNav from "@/components/nav/LeftNav.vue";
 import BottomNav from "@/components/nav/BottomNav.vue";
 
 export default {
-  name: "App",
+  components: {
+    LeftNav,
+    BottomNav,
+  },
 
   data() {
     return {
       windowSize: null,
+      navLocation: null,
     };
-  },
-
-  created() {
-    window.addEventListener("resize", this.windowSizeChange);
-
-    this.windowSizeChange();
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.windowSizeChange);
-  },
-  methods: {
-    windowSizeChange() {
-      if (window.innerWidth > 600) {
-        this.windowSize = true;
-      } else {
-        this.windowSize = false;
-      }
-    },
-  },
-
-  components: {
-    LeftNav,
-    BottomNav,
   },
 };
 </script>

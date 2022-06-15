@@ -1,3 +1,9 @@
 <template>
-  <div>this is bottomNav</div>
+  <div>fdas</div>
 </template>
+
+<script>
+export default {
+  data() {},
+};
+</script>

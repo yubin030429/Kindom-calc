@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/growCookie",
+    path: "/",
     name: "growCookie",
     component: growCookie,
   },
