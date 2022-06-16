@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       items: [
-        { title: "토핑세팅", icon: "mdi-cards-diamond", route: "/toppingSet" },
+        { title: "토핑세팅", icon: "mdi-cards-diamond", route: "/" },
         { title: "별사탕/파우더", icon: "mdi-octagram", route: "/powder" },
       ],
     };

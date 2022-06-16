@@ -1,20 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import toppingSet from "@/views/toppingSet";
-import firstPage from "@/views/firstPage";
+import powderSet from "@/views/powderSet";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "firstPage",
-    component: firstPage,
-  },
-  {
-    path: "/toppingSet",
     name: "toppingSet",
     component: toppingSet,
+  },
+  {
+    path: "/powder",
+    name: "powderSet",
+    component: powderSet,
   },
 ];
 
